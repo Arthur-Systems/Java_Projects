@@ -1,0 +1,21 @@
+2300|Art of Java Programming|56.80|
+1100|Java programming Art|89.89|
+1122|Java|45.55|
+8900|Java How to Program|89.77|
+2200|Laptop 2300|982.89|
+1100|JSP and Programming|56.99|
+2230|Desktop computer|1299.56|
+1108|Java EE and EJB|87.99|
+2208|sdsd|435.34|
+1109|Art of java Programming|88.67|
+3333|sdsd|333.33|
+2133|sadsd|334.34|
+3434|324324dfgfdg|3435.35|
+1020|CAD|34.55|
+1124|3-D printing|23456.00|
+1103|3-D Printing|3460.89|
+1103|3-D Printing|34890.89|
+1103|3-D Printing|43534009.99|
+2011|Computer Printer|456.80|
+3010|Scanner|255.90|
+1103|3-D Printing|3432490.99|
