@@ -1,3 +1,0 @@
-This line will be written to the file. 
-Version: 1.01	Author: Gao
-File name: myData.txt
