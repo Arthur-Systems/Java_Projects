@@ -5,10 +5,11 @@ public class Rectangle {
 	private static Scanner Input = new Scanner(System.in);
 	public double height, width, circumference, area;
 
-	public static void main(double height , double width) {
+	public static void main(String[] args) {
+
 		Rectangle r = new Rectangle();
 		r.getInput();
-		r.calculate(height,width);
+		r.calculate();
 		r.display();
 	}
 	
@@ -19,9 +20,10 @@ public class Rectangle {
 		width = Input.nextDouble();
 	}
 
-	public void calculate(double height, double width) {
+	public double calculate() {
 		circumference = (height + width) * 2;
 		area = height * width;
+		return area;
 	}
 
 	public void display() {
