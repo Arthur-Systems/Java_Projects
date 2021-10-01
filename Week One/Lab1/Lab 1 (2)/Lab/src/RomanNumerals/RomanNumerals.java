@@ -8,14 +8,16 @@ Brief Description: This program take a number that is less then 10 from the user
 */
 public class RomanNumerals { //start of class
     private int number;
-    public String roman;
+    public String roman = " ";
     public void setNumber( int number){
         this.number = number;
     }
     public int getNumber(){
         return number;
     }
-    public void convertNum(int number) {// in order to convert a number to a numeral, I used a string and a integer array. These array check each other and calculate accordingly.
+
+    public void convertNum(int number) {// in order to convert a number to a numeral, I used a string and a integer
+                                        // array. These array checks each other and calculates accordingly.
       
         int[] values = { 10, 9, 5, 4, 1};
         String[] numerals = { "X", "IX", "V", "IV", "I"};
