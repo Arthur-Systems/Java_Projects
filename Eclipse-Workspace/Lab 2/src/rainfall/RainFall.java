@@ -2,7 +2,7 @@ package rainfall;
 
 public class RainFall {// driver class
     // make a 12 month array
-    private int[] RainData = new int[12];
+    public int[] RainData = new int[12];
     public boolean stop;
 
     // set put values into array
