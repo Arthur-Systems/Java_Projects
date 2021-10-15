@@ -18,12 +18,17 @@ public class RainFallApp {
 					app.stop = true;
 					break;
 				} else {
-					// pass data into the array
-					app.RainData[i] = rainfall;
+
+					app.RainData[i] = rainfall; // data is passed into the array
 
 				}
 
 			}
+
+			System.out.println("The total rainfall for the year is " + app.sumRainFall());
+			System.out.println("The average rainfall was  " + app.averageRainFall());
+			System.out.println("The Most Rainfall was  " + app.greatestRainFall());
+			System.out.println("The Least Rainfall was  " + app.leastRainFall());
 
 		}
 		System.out.println("Ok Quitting!");

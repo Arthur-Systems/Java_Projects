@@ -1,14 +1,10 @@
 package rainfall;
 
 public class RainFall {// driver class
-    // make a 12 month array
-    public int[] RainData = new int[12];
+
+    public int[] RainData = new int[12]; // make a 12 value array
     public boolean stop;
 
-    // set put values into array
-    public void setRainData(int[] RainData) {
-        this.RainData = RainData;
-    }
 
     public int sumRainFall() { // Code methods to compute the sum,
         int sum = 0;
@@ -41,6 +37,7 @@ public class RainFall {// driver class
             }
         }
         return least;
+
     }
 
     public void displayRainFall() { // display the array.
