@@ -1,37 +1,39 @@
-package rainfall;
+/*
+Name: Haichuan Wei
+Course: CS125
+Lab #: Lab Two
+Submission Date: 10/14/2021
+Brief Description:  This program takes in data passed by the user in the driver class and calculates the 
+average, total , highest, and lowest amount based on the provided data.
 
+*/
+package rainfall;
 import java.util.*;
 
-public class RainFallApp {
+public class RainFallApp {// driver class
 
-	public static void main(String[] args) {// driver class
+	public static void main(String[] args) {// main method
 
-		RainFall app = new RainFall();
+		RainFall app = new RainFall(); // create object of RainFall
 		app.stop = false;
+		Scanner input = new Scanner(System.in);// create scanner object
 		while (!app.stop) {
 
-			System.out.println("Enter rainfall for month. (to exit, please enter -99 :3) ");
-			for (int i = 0; i < app.RainData.length; i++) {
-				Scanner input = new Scanner(System.in);
+			System.out.println("Enter rainfall for month. (to exit, please enter -99 :3) "); // prompt
+			for (int i = 0; i < app.RainData.length; i++) { // loop to get rainfall for each month
 				int rainfall = input.nextInt();
-				if (rainfall == -99) {
+				if (rainfall == -99) { // condition to exit
 					app.stop = true;
+
+					input.close();// close scanner
 					break;
 				} else {
-
 					app.RainData[i] = rainfall; // data is passed into the array
-
 				}
-
 			}
-
-			System.out.println("The total rainfall for the year is " + app.sumRainFall());
-			System.out.println("The average rainfall was  " + app.averageRainFall());
-			System.out.println("The Most Rainfall was  " + app.greatestRainFall());
-			System.out.println("The Least Rainfall was  " + app.leastRainFall());
-
+			app.displayRainFall(); // called the display method
 		}
-		System.out.println("Ok Quitting!");
 
-}
-}
+		System.out.println("Ok Quitting!"); // exit message
+	}// end of main method
+}// driver class
