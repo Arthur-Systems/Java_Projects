@@ -1,18 +1,23 @@
 package Person;
 
-public class Inheritance {
-//Design a super class Person with the fields for holding a person’s name, address, and phone number. 
-
+public class Person {
     private String name;
     private String address;
     private String phoneNumber;
     
-    public Inheritance(String name, String address, String phoneNumber) {
+    public Person(String name, String address, String phoneNumber) {
         this.name = name;
         this.address = address;
         this.phoneNumber = phoneNumber;
     }
     
+    public Person(String name, String address) {
+        this.name = name;
+        this.address = address;
+    }
+    public Person(String name) {
+        this.name = name;
+    }
     public String getName() {
         return name;
     }
@@ -31,12 +36,5 @@ public class Inheritance {
     public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
-    
-
-
-    
-
-
-
 
 }
