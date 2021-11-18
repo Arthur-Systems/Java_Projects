@@ -20,7 +20,7 @@ public class squareapp extends Application {
 		launch(args);
 	}
 	@Override
-	public void start(Stage primaryStage) throws Exception {
+	public void start(Stage primaryStage)  {
 		primaryStage.setTitle("Square"); // Set the title
 		primaryStage.setWidth(800);
 		primaryStage.setHeight(600); // set the size of the window
@@ -68,6 +68,8 @@ public class squareapp extends Application {
 		submit.setPrefSize(100, 50);
 		submit.setStyle("-fx-background-color: red"); //button color
 		//on click, calculate the square
+		Text result = new Text(""); //create text
+
 		submit.setOnAction(e -> {
 				try {
 					int num = Integer.parseInt(side.getText());		
@@ -77,7 +79,9 @@ public class squareapp extends Application {
 					else {
 						int perimeter = 4 * num;
 						int area = num * num;
-						Text result = new Text("The Perimeter is :" + perimeter + "\n" + "The Area is :" + area +"\n"+ "The Given Side Length is:" + num);
+						//change the contects of the text
+						result.setText("The Perimeter is :"  + perimeter + "\n"+ "The Area is :" + area +"\n"+ "The Given Side Length is:" + num);
+						main.getChildren().remove(result);
 						result.wrappingWidthProperty().bind(main.widthProperty()); //word wrap based on window width
 						result.setFont(Font.font("Arial", FontWeight.BOLD, 20)); //font data
 						result.setFill(Color.BLACK); //font color
@@ -87,9 +91,7 @@ public class squareapp extends Application {
 						side.setEditable(false);//lock the text field
 						submit.setDisable(true); //disable the button
 					}
-				} catch(NegativeDoubleException e1) {
-				
-				}
+				} 
 				catch(NumberFormatException e2) {
 					Alert alert = new Alert(Alert.AlertType.ERROR);
 					alert.setTitle("Error");
@@ -97,15 +99,18 @@ public class squareapp extends Application {
 					alert.setContentText("Please enter a number");
 					alert.showAndWait();
 					side.clear();
+				} catch (NegativeDoubleException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
 				}
 			}
 		);
-		submit.setTranslateY(125); //button position
-		submit.setTranslateX(-200); //button position
-		main.getChildren().add(submit); //add button to stack pane
-		primaryStage.show(); //show scene
+	submit.setTranslateY(125); //button position
+	submit.setTranslateX(-200); //button position
+	main.getChildren().add(submit); //add button to stack pane
+	primaryStage.show(); //show scene
 	Button clear = new Button("Clear"); //clear button
-	clear.setFont(Font.font("Verdana", FontWeight.BOLD, FontPosture.REGULAR, 20));
+	clear.setFont(Font.font("Verdana", FontWeight.BOLD, 20));
 	clear.setPrefSize(100, 50);
 	clear.setStyle("-fx-background-color: red"); //button color
 	clear.setTranslateY(125); //button position
@@ -113,7 +118,7 @@ public class squareapp extends Application {
 	clear.setOnAction(e -> {
 		side.clear(); //clear text field
 
-
+		main.getChildren().remove(result);//clear the text
 		
 		side.setEditable(true); //unlock text field
 		submit.setDisable(false); // re-enable button
