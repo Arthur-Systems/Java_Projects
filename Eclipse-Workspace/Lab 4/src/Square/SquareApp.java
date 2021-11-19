@@ -7,6 +7,9 @@ Submission Date: 11/18
 Brief Description: This program is a square calculator. 
 It uses JavaFX to create a GUI which allows the user to input the length of the side of the square 
 and then calculate the area and perimeter of the square.
+
+@function main: This is the main method.It launches the program.
+@function start: This is the start method. It has all the startup code and is where the GUI is created.
 */
 import javafx.application.Application;
 import javafx.scene.Scene;
