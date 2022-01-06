@@ -14,14 +14,9 @@ and then calculate the area and perimeter of the square.
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import javafx.scene.shape.*;
 import javafx.scene.text.*;
-import javafx.animation.*;
-import javafx.geometry.*;
 import javafx.scene.control.*;
 import javafx.scene.layout.*;
-import javafx.scene.image.*;
-import javafx.scene.effect.*;
 import javafx.scene.paint.*;
 
 public class squareapp extends Application { //main class
@@ -106,7 +101,6 @@ public class squareapp extends Application { //main class
 					alert.showAndWait(); // show and wait for response
 					side.clear(); //clear the text field
 				} catch (NegativeDoubleException e1) {
-					// TODO Auto-generated catch block
 					e1.printStackTrace(); //print error message
 					side.clear(); //clear the text field
 				}
