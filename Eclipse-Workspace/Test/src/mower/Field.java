@@ -2,8 +2,13 @@ package mower;
 
 public class Field {
 
-	public void setField(int size) { // sets the size of the field, the size is the number of rows and
-										// columns
+	public void getSize(int size) {
+		return size;
+	}
+
+	public void setSize() { // sets the size of the field, the size is the number of rows and columns
+	
+		f.getSize();
 		int[][] lawn = new int[size][size];
 		for (int i = 0; i < size; i++) {
 			for (int j = 0; j < size - 1; j++) {
@@ -14,8 +19,9 @@ public class Field {
 
 	};
 
-	public void placeObstacles(int[][] lawn, obstacles ) { // places the obstacles in the lawn
+	public void placeObstacles(int[][] lawn) { // places the obstacles in the lawn
 		Field f = new Field();
+		int size = f.getSize();
 		for (int i = 0; i < obstacles; i++) {
 			int x = (int) (Math.random() * lawn.length);
 			int y = (int) (Math.random() * lawn.length);

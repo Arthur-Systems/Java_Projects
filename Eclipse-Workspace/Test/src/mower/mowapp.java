@@ -4,7 +4,7 @@ import java.util.Scanner;
 import java.util.ArrayList;
 //import math random
 
-public class mowapp {
+public class   {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -21,7 +21,8 @@ public class mowapp {
 		int obstacles = sc.nextInt();
 		sc.close();
 		Field f = new Field();
-		f.setSize(size, obstacles);
+		f.setSize(size);
+
 		// lawnmower lm = new lawnmower();
 		// lm.setMower(mowerX, mowerY);
 
